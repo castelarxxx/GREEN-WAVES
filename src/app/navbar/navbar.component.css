@@ -1,0 +1,103 @@
+.nomeGreenwaves {
+    position: fixe;
+    right: 20%;
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #40B121;
+    text-shadow: 2px 0px 4px;
+}
+
+.logoGreenwaves {
+    position: absolute;
+    right: 10%;
+    width: 6rem;
+    height: 6rem;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.aNav, .navBar {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1rem;
+    color: white;
+    padding: .5rem 1rem;
+}
+
+.nav ul li a {
+    position: relative;
+}
+
+.nav ul li a:hover {
+    color: #40B121;
+}
+
+.nav ul li a::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 0.6rem;
+    content: '.';
+    color: transparent;
+    background: #ffffff;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+
+.nav ul li a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+.nav ul li a:after, .nav ul li a:before {
+    transition: all .5s;
+}
+
+/* Ajustes para dispositivos maiores */
+@media (min-width: 768px) {
+    .nomeGreenwaves {
+        right: 50%;
+        font-size: 3rem;
+        margin-left: 3rem;
+    }
+
+    .logoGreenwaves {
+        right: 40%;
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .aNav, .navBar {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nomeGreenwaves {
+        right: 70%;
+        font-size: 4rem;
+        margin-left: 5rem;
+    }
+
+    .logoGreenwaves {
+        right: 83%;
+        width: 11rem;
+        height: 11rem;
+    }
+
+    .aNav, .navBar {
+        font-size: 2rem;
+    }
+}
